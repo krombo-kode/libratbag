@@ -111,7 +111,7 @@ hidpp20_get_quirk_string(enum hidpp20_quirk quirk)
 	CASE_RETURN_STRING(HIDPP20_QUIRK_G305);
 	CASE_RETURN_STRING(HIDPP20_QUIRK_G602);
 	CASE_RETURN_STRING(HIDPP20_QUIRK_G502X_PLUS);
-	CASE_RETURN_STRING(HIDPP20_QUIRK_G502_OFFSET);
+	CASE_RETURN_STRING(HIDPP20_QUIRK_INDEX_OFFSET);
 	}
 
 	abort();
@@ -2279,7 +2279,7 @@ hidpp20_onboard_profiles_allocate(struct hidpp20_device *device,
 	active_profile_index = rc;
 
 	/* Apply quirk for devices that return 1-indexed profile */
-	if (device->quirk == HIDPP20_QUIRK_G502_OFFSET && active_profile_index > 0)
+	if (device->quirk == HIDPP20_QUIRK_INDEX_OFFSET && active_profile_index > 0)
 		active_profile_index--;
 
 	profiles = zalloc(sizeof(struct hidpp20_profiles));

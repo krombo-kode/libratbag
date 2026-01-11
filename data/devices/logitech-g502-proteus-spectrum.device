@@ -5,4 +5,4 @@ Driver=hidpp20
 DeviceType=mouse
 
 [Driver/hidpp20]
-Quirk=G502_OFFSET
+Quirk=Index_OFFSET

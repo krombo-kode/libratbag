@@ -227,8 +227,8 @@ init_data_hidpp20(struct ratbag *ratbag,
 			data->hidpp20.quirk = HIDPP20_QUIRK_G602;
 		else if(streq(str, "G502X_PLUS"))
 			data->hidpp20.quirk = HIDPP20_QUIRK_G502X_PLUS;
-		else if(streq(str, "G502_OFFSET"))
-			data->hidpp20.quirk = HIDPP20_QUIRK_G502_OFFSET;
+		else if(streq(str, "INDEX_OFFSET"))
+			data->hidpp20.quirk = HIDPP20_QUIRK_INDEX_OFFSET;
 	}
 }
 
